@@ -1,0 +1,600 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "boreal-cafe",
+ "nombre": "Boreal Café",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "5491162788172",
+ "prefijoPedido": "BO",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo-pizarra.svg",
+  "logoPanel": "img/logo-rosa.svg",
+  "favicon": "img/favicon.png",
+  "colores": {
+   "fondo": "#F7F2EC",
+   "superficie": "#FFFFFF",
+   "texto": "#263D43",
+   "primario": "#263D43",
+   "sobrePrimario": "#F7F2EC",
+   "acento": "#EE9F66",
+   "sobreAcento": "#263D43",
+   "borde": "#E8D3D3"
+  },
+  "fuentes": {
+   "titulos": "'Fraunces', serif",
+   "texto": "'Montserrat', sans-serif",
+   "googleFonts": "Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,0..100,0..1&family=Montserrat:wght@400;500;600;700&family=Shrikhand"
+  },
+  "estilo": {
+   "forma": "redondeada",
+   "sombra": "suave",
+   "borde": "1.5px",
+   "mayusculas": false,
+   "radio": "22px"
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": false,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [],
+  "mar": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "mie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "jue": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "vie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "sab": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ],
+  "dom": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ]
+ },
+ "reservas": {
+  "intervaloMin": 30,
+  "duracionMin": 60,
+  "capacidad": 20,
+  "maxPersonas": 6,
+  "anticipacionMin": 60,
+  "diasAdelante": 14,
+  "ultimoTurnoMin": 60,
+  "cerrados": []
+ },
+ "pedidos": {
+  "salidas": [
+   "whatsapp",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "envio": 0,
+  "minimo": 0
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "con-cafe",
+    "nombre": "Con café",
+    "orden": 0
+   },
+   {
+    "id": "frios",
+    "nombre": "Fríos",
+    "orden": 1
+   },
+   {
+    "id": "laminados",
+    "nombre": "Laminados",
+    "orden": 2
+   },
+   {
+    "id": "masas",
+    "nombre": "Budines y masas",
+    "orden": 3
+   },
+   {
+    "id": "tortas",
+    "nombre": "Tortas por porción",
+    "orden": 4
+   },
+   {
+    "id": "brunch",
+    "nombre": "Brunch y salado",
+    "orden": 5
+   },
+   {
+    "id": "encargos",
+    "nombre": "Encargos",
+    "orden": 6
+   }
+  ],
+  "productos": [
+   {
+    "id": "espresso",
+    "categoria": "con-cafe",
+    "nombre": "Espresso",
+    "descripcion": "Del café de la tolva de la semana, tostado por nosotros.",
+    "precio": 3900,
+    "foto": "img/espresso.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 0
+   },
+   {
+    "id": "cortado",
+    "categoria": "con-cafe",
+    "nombre": "Cortado",
+    "descripcion": "",
+    "precio": 4300,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 1
+   },
+   {
+    "id": "americano",
+    "categoria": "con-cafe",
+    "nombre": "Americano",
+    "descripcion": "",
+    "precio": 4200,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 2
+   },
+   {
+    "id": "latte",
+    "categoria": "con-cafe",
+    "nombre": "Latte",
+    "descripcion": "Con latte art, en nuestra taza roja.",
+    "precio": 5600,
+    "foto": "img/latte.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 3
+   },
+   {
+    "id": "capuchino",
+    "categoria": "con-cafe",
+    "nombre": "Capuchino",
+    "descripcion": "",
+    "precio": 5800,
+    "foto": "img/latte-3.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 4
+   },
+   {
+    "id": "flat-white",
+    "categoria": "con-cafe",
+    "nombre": "Flat white",
+    "descripcion": "Doble espresso y poca leche.",
+    "precio": 5900,
+    "foto": "img/latte-2.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 5
+   },
+   {
+    "id": "iced-latte",
+    "categoria": "frios",
+    "nombre": "Iced latte",
+    "descripcion": "",
+    "precio": 6400,
+    "foto": "img/iced-latte.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 6
+   },
+   {
+    "id": "cold-brew",
+    "categoria": "frios",
+    "nombre": "Cold brew",
+    "descripcion": "16 horas de maceración en frío. Puro y suave.",
+    "precio": 6200,
+    "foto": "img/cold-brew.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 7
+   },
+   {
+    "id": "bebida-estacion",
+    "categoria": "frios",
+    "nombre": "Bebida de estación",
+    "descripcion": "Cambia con la temporada: preguntá cuál hay hoy.",
+    "precio": 7200,
+    "foto": "img/bebida-estacion.webp",
+    "etiquetas": [
+     "nuevo"
+    ],
+    "disponible": true,
+    "orden": 8
+   },
+   {
+    "id": "medialuna",
+    "categoria": "laminados",
+    "nombre": "Medialuna",
+    "descripcion": "De La Chica Manteca. Ideal para mojar en el café.",
+    "precio": 1800,
+    "foto": "img/medialuna.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 9
+   },
+   {
+    "id": "medialuna-xl",
+    "categoria": "laminados",
+    "nombre": "Medialuna XL",
+    "descripcion": "Solo los fines de semana.",
+    "precio": 3200,
+    "foto": "img/medialunas-xl.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 10
+   },
+   {
+    "id": "croissant",
+    "categoria": "laminados",
+    "nombre": "Croissant",
+    "descripcion": "",
+    "precio": 3900,
+    "foto": "img/croissants.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 11
+   },
+   {
+    "id": "croissant-roll",
+    "categoria": "laminados",
+    "nombre": "Croissant roll de pistacho",
+    "descripcion": "Con pastelera de pistacho.",
+    "precio": 6200,
+    "foto": "",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 12
+   },
+   {
+    "id": "pain-au-chocolat",
+    "categoria": "laminados",
+    "nombre": "Pain au chocolat",
+    "descripcion": "Buen café y buenos laminados: combinación que nunca falla.",
+    "precio": 5200,
+    "foto": "img/pain-au-chocolat.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 13
+   },
+   {
+    "id": "trenza",
+    "categoria": "laminados",
+    "nombre": "Trenza",
+    "descripcion": "Pastelera y dulce de leche.",
+    "precio": 4800,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 14
+   },
+   {
+    "id": "madeleines",
+    "categoria": "masas",
+    "nombre": "Madeleines de naranja",
+    "descripcion": "Los viernes. Porción de 3.",
+    "precio": 4200,
+    "foto": "img/madeleines.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 15
+   },
+   {
+    "id": "brownie",
+    "categoria": "masas",
+    "nombre": "Brownie",
+    "descripcion": "",
+    "precio": 4800,
+    "foto": "img/brownie.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 16
+   },
+   {
+    "id": "budin",
+    "categoria": "masas",
+    "nombre": "Budín glaseado",
+    "descripcion": "Porción.",
+    "precio": 3900,
+    "foto": "img/budin.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 17
+   },
+   {
+    "id": "muffin",
+    "categoria": "masas",
+    "nombre": "Muffin",
+    "descripcion": "",
+    "precio": 4200,
+    "foto": "img/muffin.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 18
+   },
+   {
+    "id": "franui",
+    "categoria": "tortas",
+    "nombre": "Torta Franui",
+    "descripcion": "Nuestra torta estrella. En los dos locales.",
+    "precio": 8900,
+    "foto": "img/torta-franui.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 19
+   },
+   {
+    "id": "cheesecake-lima",
+    "categoria": "tortas",
+    "nombre": "Cheesecake de chocolate blanco y lima",
+    "descripcion": "De las más pedidas.",
+    "precio": 8200,
+    "foto": "img/cheesecake.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 20
+   },
+   {
+    "id": "ny-cheesecake",
+    "categoria": "tortas",
+    "nombre": "NY cheesecake",
+    "descripcion": "",
+    "precio": 7900,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 21
+   },
+   {
+    "id": "lemon-pie",
+    "categoria": "tortas",
+    "nombre": "Lemon pie",
+    "descripcion": "",
+    "precio": 7200,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 22
+   },
+   {
+    "id": "sambayon",
+    "categoria": "tortas",
+    "nombre": "Torta de sambayón",
+    "descripcion": "Recomendación del mes.",
+    "precio": 8400,
+    "foto": "",
+    "etiquetas": [
+     "nuevo"
+    ],
+    "disponible": true,
+    "orden": 23
+   },
+   {
+    "id": "frangipane",
+    "categoria": "tortas",
+    "nombre": "Frangipane de pistacho y frambuesa",
+    "descripcion": "",
+    "precio": 7600,
+    "foto": "img/frangipane.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 24
+   },
+   {
+    "id": "almendras-frutillas",
+    "categoria": "tortas",
+    "nombre": "Torta de crema de almendras y frutillas",
+    "descripcion": "",
+    "precio": 7900,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 25
+   },
+   {
+    "id": "vasca",
+    "categoria": "tortas",
+    "nombre": "Vasca",
+    "descripcion": "",
+    "precio": 7900,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 26
+   },
+   {
+    "id": "completo",
+    "categoria": "brunch",
+    "nombre": "El completo",
+    "descripcion": "Huevos revueltos, jamón, queso, palta, pan y frutas. A cualquier hora.",
+    "precio": 16500,
+    "foto": "img/completo.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 27
+   },
+   {
+    "id": "toston-manzanas",
+    "categoria": "brunch",
+    "nombre": "Tostón de manzanas",
+    "descripcion": "Manzanas caramelizadas, queso crema, mantequilla de maní, nueces y canela.",
+    "precio": 11800,
+    "foto": "",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 28
+   },
+   {
+    "id": "toston-ricota",
+    "categoria": "brunch",
+    "nombre": "Tostón de ricota y pistachos",
+    "descripcion": "Ricota batida, pesto de pistachos y albahaca.",
+    "precio": 12400,
+    "foto": "",
+    "etiquetas": [
+     "veggie"
+    ],
+    "disponible": true,
+    "orden": 29
+   },
+   {
+    "id": "french-toast",
+    "categoria": "brunch",
+    "nombre": "French toast",
+    "descripcion": "Con frutas de estación.",
+    "precio": 11200,
+    "foto": "img/french-toast.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 30
+   },
+   {
+    "id": "tostado",
+    "categoria": "brunch",
+    "nombre": "Tostado de jamón y queso",
+    "descripcion": "",
+    "precio": 8900,
+    "foto": "img/tostado.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 31
+   },
+   {
+    "id": "yogur",
+    "categoria": "brunch",
+    "nombre": "Yogur con granola y fruta",
+    "descripcion": "Color, frescura y energía.",
+    "precio": 8600,
+    "foto": "img/yogur.webp",
+    "etiquetas": [
+     "veggie"
+    ],
+    "disponible": true,
+    "orden": 32
+   },
+   {
+    "id": "franui-entera",
+    "categoria": "encargos",
+    "nombre": "Torta Franui entera",
+    "descripcion": "Encargala con 48 h de anticipación.",
+    "precio": 68000,
+    "foto": "img/torta-franui.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "disponible": true,
+    "orden": 33
+   },
+   {
+    "id": "cheesecake-entero",
+    "categoria": "encargos",
+    "nombre": "Cheesecake de chocolate blanco y lima, entero",
+    "descripcion": "Con 48 h de anticipación.",
+    "precio": 59000,
+    "foto": "img/cheesecake.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 34
+   },
+   {
+    "id": "docena-medialunas",
+    "categoria": "encargos",
+    "nombre": "Docena de medialunas",
+    "descripcion": "Para el desayuno de la oficina o el domingo en casa.",
+    "precio": 19500,
+    "foto": "img/barista-croissants.webp",
+    "etiquetas": [],
+    "disponible": true,
+    "orden": 35
+   },
+   {
+    "id": "box-temporada",
+    "categoria": "encargos",
+    "nombre": "Box de temporada",
+    "descripcion": "Laminados de edición limitada, con La Chica Manteca.",
+    "precio": 32000,
+    "foto": "img/croissant-cafe.webp",
+    "etiquetas": [
+     "nuevo"
+    ],
+    "disponible": true,
+    "orden": 36
+   }
+  ]
+ },
+ "textos": {
+  "agregar": "Lo quiero",
+  "agregado": "¡Al vaso!",
+  "tuPedido": "Tu vaso",
+  "verPedido": "Ver tu vaso",
+  "carritoVacio": "Tu vaso está vacío.",
+  "carritoVacioSub": "¿Un cafecito? Elegí algo de la carta.",
+  "retiro": "Retiro en Boreal",
+  "notaPedido": "¿En qué local retirás (Devoto o Urquiza), qué día y a qué hora?",
+  "enviarPedido": "Encargar por WhatsApp",
+  "pagar": "Pagar con Mercado Pago",
+  "pedidoListo": "¡Listo! Te esperamos en Boreal",
+  "pedidoListoSub": "Tu código es {codigo}. Lo vemos en el panel y te escribimos por WhatsApp para confirmar.",
+  "waPedido": "¡Hola {negocio}! Quiero encargar:",
+  "seguir": "Seguir mirando",
+  "pedidoPagadoSub": "Encargo {codigo} pagado. Te esperamos para retirarlo."
+ }
+}
